@@ -1,4 +1,4 @@
-package in.n4smh.microservices.people_query.service;
+package in.n4smh.microservices.person_query.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,11 +8,11 @@ import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
-import in.n4smh.microservices.people_shared.dto.model.Person;
-import in.n4smh.microservices.people_shared.dto.model.PersonRole;
-import in.n4smh.microservices.people_shared.entity.PersonEntity;
-import in.n4smh.microservices.people_shared.mapper.IPersonMapper;
-import in.n4smh.microservices.people_query.repo.PersonRepo;
+import in.n4smh.microservices.person_query.repo.PersonRepo;
+import in.n4smh.microservices.person_shared.dto.model.Person;
+import in.n4smh.microservices.person_shared.dto.model.PersonRole;
+import in.n4smh.microservices.person_shared.entity.PersonEntity;
+import in.n4smh.microservices.person_shared.mapper.IPersonMapper;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

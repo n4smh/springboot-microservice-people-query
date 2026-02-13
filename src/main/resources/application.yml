@@ -1,6 +1,6 @@
 spring:
   application:
-    name: app_people_query
+    name: app_person_query
   jpa:
     database: mysql
     show-sql: true
@@ -28,7 +28,16 @@ management:
       export:
         otlp:
           endpoint: http://localhost:4318/v1/logs
-
+  endpoints:
+    web:
+      exposure:
+        include:
+        - info
+        - health
+  endpoint:
+    health:
+      show-details: always
+      #show-components: when-authorized
 
 logging:
   pattern:

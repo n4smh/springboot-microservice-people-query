@@ -1,9 +1,9 @@
-package in.n4smh.microservices.people_query.service;
+package in.n4smh.microservices.person_query.service;
 
 import java.util.List;
 
-import in.n4smh.microservices.people_shared.dto.model.PersonRole;
-import in.n4smh.microservices.people_shared.dto.model.Role;
+import in.n4smh.microservices.person_shared.dto.model.PersonRole;
+import in.n4smh.microservices.person_shared.dto.model.Role;
 
 public interface IPersonRoleService {
 

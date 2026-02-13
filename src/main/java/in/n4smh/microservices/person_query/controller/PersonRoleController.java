@@ -1,4 +1,4 @@
-package in.n4smh.microservices.people_query.controller;
+package in.n4smh.microservices.person_query.controller;
 
 import java.util.List;
 
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import in.n4smh.microservices.people_query.config.TraceIdFilter;
-import in.n4smh.microservices.people_query.service.IPersonRoleService;
-import in.n4smh.microservices.people_query.shared.ApiResponseBody;
-import in.n4smh.microservices.people_shared.dto.model.PersonRole;
-import in.n4smh.microservices.people_shared.dto.model.Role;
+import in.n4smh.microservices.person_query.config.TraceIdFilter;
+import in.n4smh.microservices.person_query.service.IPersonRoleService;
+import in.n4smh.microservices.person_query.shared.ApiResponseBody;
+import in.n4smh.microservices.person_shared.dto.model.PersonRole;
+import in.n4smh.microservices.person_shared.dto.model.Role;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 
