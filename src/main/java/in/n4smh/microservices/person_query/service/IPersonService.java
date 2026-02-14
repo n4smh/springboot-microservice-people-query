@@ -1,8 +1,8 @@
-package in.n4smh.microservices.people_query.service;
+package in.n4smh.microservices.person_query.service;
 
 import java.util.List;
 
-import in.n4smh.microservices.people_shared.dto.model.Person;
+import in.n4smh.microservices.person_shared.dto.model.Person;
 
 public interface IPersonService {
 

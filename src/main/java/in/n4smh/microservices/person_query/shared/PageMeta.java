@@ -1,4 +1,4 @@
-package in.n4smh.microservices.people_query.shared;
+package in.n4smh.microservices.person_query.shared;
 
 import lombok.Builder;
 import lombok.Data;

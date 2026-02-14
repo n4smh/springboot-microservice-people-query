@@ -1,16 +1,16 @@
-package in.n4smh.microservices.people_query.service;
+package in.n4smh.microservices.person_query.service;
 
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
-import in.n4smh.microservices.people_shared.dto.model.PersonRole;
-import in.n4smh.microservices.people_shared.dto.model.Role;
-import in.n4smh.microservices.people_shared.entity.RoleEntity;
-import in.n4smh.microservices.people_shared.mapper.IRoleMapper;
-import in.n4smh.microservices.people_query.repo.PersonRoleRepo;
-import in.n4smh.microservices.people_query.repo.RoleRepo;
+import in.n4smh.microservices.person_query.repo.PersonRoleRepo;
+import in.n4smh.microservices.person_query.repo.RoleRepo;
+import in.n4smh.microservices.person_shared.dto.model.PersonRole;
+import in.n4smh.microservices.person_shared.dto.model.Role;
+import in.n4smh.microservices.person_shared.entity.RoleEntity;
+import in.n4smh.microservices.person_shared.mapper.IRoleMapper;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

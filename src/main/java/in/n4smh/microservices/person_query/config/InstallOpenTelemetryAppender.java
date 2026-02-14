@@ -1,4 +1,4 @@
-package in.n4smh.microservices.people_query.config;
+package in.n4smh.microservices.person_query.config;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Configuration;
