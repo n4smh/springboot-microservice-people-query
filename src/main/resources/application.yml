@@ -1,6 +1,6 @@
 spring:
   application:
-    name: app_person_query
+    name: PersonQueryAPIs
   jpa:
     database: mysql
     show-sql: true
@@ -10,6 +10,13 @@ spring:
     url: jdbc:mysql://localhost:3306/n4smh_org
     username: nagesh
     password: asdf1234
+  security:
+    user:
+      name: user_person_query
+      password: asdf1234
+
+server:
+  port: 8092
 
 management:
   tracing:
@@ -34,10 +41,6 @@ management:
         include:
         - info
         - health
-  endpoint:
-    health:
-      show-details: always
-      #show-components: when-authorized
 
 logging:
   pattern:
@@ -46,6 +49,11 @@ logging:
   #include-application-name: false
 
 springdoc:
+  show-actuator: true
   swagger-ui:
     path: '/swagger-ui.html'
-  show-actuator: true
+
+downstream:
+  swagger-central:
+    server:
+      uri: http://localhost:8090 
