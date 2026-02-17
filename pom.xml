@@ -6,19 +6,18 @@
 
 	<parent>
 		<groupId>in.n4smh.microservices</groupId>
-		<artifactId>parent</artifactId>
-		<version>0.0.2-SNAPSHOT</version>
+		<artifactId>parent-pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<artifactId>person-query</artifactId>
+	<groupId>in.n4smh.microservices.person</groupId>
+	<artifactId>query</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Person Query APIs</name>
+	<name>PersonQueryAPIs</name>
 	<description>APIs to fetch person related details</description>
 
 	<properties>
-		<java.version>21</java.version>
-
 		<person-shared.version>0.0.1-SNAPSHOT</person-shared.version>
 	</properties>
 
@@ -32,6 +31,13 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Start: Spring Security -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<!-- End -->
 
 		<!-- Start: JPA and MySql connector -->
 		<dependency>
@@ -66,8 +72,8 @@
 
 		<!-- Start: Shared dependencies-->
 		<dependency>
-			<groupId>in.n4smh.microservices</groupId>
-			<artifactId>person-shared</artifactId>
+			<groupId>in.n4smh.microservices.person</groupId>
+			<artifactId>shared</artifactId>
 			<version>${person-shared.version}</version>
 		</dependency>
 		<!-- End -->
@@ -80,7 +86,9 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>${nexus-docker-path}${project.artifactId}:${project.version}</name>
+						<name>
+							${nexus-docker-path}${project.artifactId}:${project.version}
+						</name>
 						<publish>true</publish>
 					</image>
 					<docker>
