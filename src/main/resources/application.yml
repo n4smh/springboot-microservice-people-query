@@ -1,40 +1,39 @@
 spring:
   application:
-    name: PersonQueryAPIs
+    name: ${person.query.name}
+
+  security:
+    user:
+      name: ${person.query.security-user-name}
+      password: ${person.query.security-user-password}
+
   jpa:
-    database: mysql
-    show-sql: true
+    database: ${person.query.db.database}
+    show-sql: ${person.query.db.show-sql}
     hibernate:
       ddl-auto: none
   datasource:
-    url: jdbc:mysql://localhost:3306/n4smh_org
-    username: nagesh
-    password: asdf1234
-  security:
-    user:
-      name: user_person_query
-      password: asdf1234
-
-server:
-  port: 8092
+    url: ${person.query.db.uri}
+    username: ${person.query.db.username}
+    password: ${person.query.db.password}
 
 management:
   tracing:
     sampling:
-      probability: 1.0
+      probability: ${person.otlp-tracing-sampling-probability}
   otlp:
     metrics:
       export:
-        url: http://localhost:4318/v1/metrics
+        url: ${person.otlp-metrics-uri}
   opentelemetry:
     tracing:
       export:
         otlp:
-          endpoint: http://localhost:4318/v1/traces
+          endpoint: ${person.otlp-tracing-uri}
     logging:
       export:
         otlp:
-          endpoint: http://localhost:4318/v1/logs
+          endpoint: ${person.otlp-logging-uri}
   endpoints:
     web:
       exposure:
@@ -44,16 +43,15 @@ management:
 
 logging:
   pattern:
-    #console: "%d ${spring.application.name} [ %X{traceId} %X{userId} ] %level - %-36logger{36} : %msg%n"
-    correlation: "[ %X{traceId:-} %X{spanId:-} ] "
-  #include-application-name: false
+    correlation: ${person.logging-pattern-correlation}
 
 springdoc:
   show-actuator: true
   swagger-ui:
-    path: '/swagger-ui.html'
+    enabled: ${person.swagger-enabled}
+  api-docs:
+    enabled: ${person.swagger-enabled}
 
-downstream:
-  swagger-central:
-    server:
-      uri: http://localhost:8090 
+server:
+  port: ${person.query.port}
+

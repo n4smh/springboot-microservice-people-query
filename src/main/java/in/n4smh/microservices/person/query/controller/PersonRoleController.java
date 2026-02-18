@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import in.n4smh.microservices.person.query.config.TraceIdFilter;
+import in.n4smh.microservices.person.parent_webmvc.config.TraceIdFilter;
 import in.n4smh.microservices.person.query.service.IPersonRoleService;
-import in.n4smh.microservices.person.query.shared.ApiResponseBody;
+import in.n4smh.microservices.person.shared.api.model.ApiResponseBody;
 import in.n4smh.microservices.person.shared.dto.model.PersonRole;
 import in.n4smh.microservices.person.shared.dto.model.Role;
 import io.swagger.v3.oas.annotations.tags.Tag;

@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @EnableJpaRepositories
-@SpringBootApplication(scanBasePackages = "in.n4smh.microservices")
+@SpringBootApplication(scanBasePackages = "in.n4smh.microservices.person")
 public class PersonQueryApplication {
 
 	public static void main(String[] args) {
