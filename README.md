@@ -1,1 +1,1 @@
-# springboot-microservice-people-query
+# PersonQueryAPIs
