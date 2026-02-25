@@ -9,7 +9,7 @@ person:
   otlp-tracing-sampling-probability: 1.0
    
   query:
-    name: PersonQueryAPIs
+    name: person-query-apis
     port: 8092
     security-user-name: user_person_staging
     security-user-password: staging1234
